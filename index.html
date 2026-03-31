@@ -1,124 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
+  <!-- TODO: Replace with your paper title and authors -->
   <title>StereoVGGT</title>
-  <link rel="icon" type="image/x-icon" href="static/images/xmu.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <!-- KaTeX JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <!-- 可选：自动渲染扩展 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
 </head>
 <body>
 
 
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  
+
+  <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">StereoVGGT: A Training-Free<br>Visual Geometry Transformer<br>for Stereo Vision</h1>
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">StereoVGGT: A Training-Free Visual Geometry Transformer for Stereo Vision</h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+              <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Ziyang Chen</a>,
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yansong Qu</a>,
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">You Shen</a>,
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xuan Cheng</a>,
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Liujuan Cao</a><sup>*</sup></span>
-                  <span class="author-block">
-                  </span>
-                  </div>
+                <a href="https://chenziyang.cn" target="_blank">Ziyang Chen</a>,</span>
+                <span class="author-block">
+                <a href="https://quyans.github.io" target="_blank">Yansong Qu</a>,</span>
+                <span class="author-block">
+                <a href="https://mystorm16.github.io" target="_blank">You Shen</a>,</span>
+                <span class="author-block">
+                <a href="https://chengxuan90.github.io" target="_blank">Xuan Cheng</a>,</span>
+                <span class="author-block">
+                  <a href="https://mac.xmu.edu.cn/ljcao/index.htm" target="_blank">Liujuan Cao</a><sup>*</sup>
+                </span>
+                </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Xiamen University</span>
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">Media Analytics and Computing (MAC) Lab, Xiamen University</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- Arxiv PDF link -->
-                      <!-- ArXiv abstract Link -->
-                      <span class="link-block">
-                          <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                            <i class="ai ai-arxiv"></i>
-                          </span>
-                          <span>arXiv</span>
-                        </a>
-                      </span>
-                      
-                      <!-- Github link -->
-                      <span class="link-block">
-                        <a href="" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fab fa-github"></i>
-                        </span>
-                        <span>Code (Coming Soon)</span>
-                      </a>
-                      </span>
-                    </div>
+                  <!-- TODO: Update with your arXiv paper ID -->
+                  <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                  </span>
+
+                  <!-- TODO: Add your supplementary material PDF or remove this section -->
+                  <span class="link-block">
+                    <a href="static/pdf/appendix.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                    </a>
+                  </span>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -127,84 +264,183 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
           <p>
-            With the advancement of 3D devices, the requirements for stereo vision tasks, including stereo matching and stereo conversion, have emerged as a significant research area. Current stereo vision backbones typically leverage monocular depth estimation (MDE) models or visual foundation models (VFMs). However, <b>these backbones</b> are predominantly pretrained without explicit supervision of camera poses, resulting in a <b>deficiency in camera-awareness</b> that inherently constrains binocular perception. Motivated by this limitation, we investigate the potential of Visual Geometry Grounded Transformer (VGGT), a feed-forward model trained with camera poses and 3D priors, as a feature backbone. Nevertheless, its direct application to stereo vision yields sub-optimal performance. We observe that <b>VGGT features exhibit more pronounced degradation</b> compared to VFMs and MDE models, presenting a barrier to its utility as a reliable backbone for stereo vision tasks. To bridge this gap, we propose StereoVGGT, a feature backbone specifically tailored for stereo vision. By re-weighting the original VGGT and introducing a novel, training-free feature adjustment pipeline, we mitigate degradation and unlock the latent camera calibration knowledge embedded within the model. Extensive experiments demonstrate that our StereoVGGT-based binocular matching network ranks <b>1<sup>st</sup></b> among all published methods on the KITTI online benchmark. Furthermore, our stereo conversion framework achieves SOTA performance, validating that StereoVGGT serves as a highly effective backbone that advances the field of stereo vision.
+Driven by the advancement of 3D devices, stereo vision tasks including stereo matching and stereo conversion have emerged as a critical research frontier. <span style="background-color: #ddebf7;">Contemporary stereo vision backbones typically rely on either monocular depth estimation (MDE) models or visual foundation models (VFMs). Crucially, these models are predominantly pretrained without explicit supervision of camera poses. Given that such geometric knowledge is indispensable for stereo vision, the absence of explicit spatial constraints constitutes a significant performance bottleneck for existing architectures.</span> 
+Recognizing that the Visual Geometry Grounded Transformer (VGGT) operates as a foundation model pretrained on extensive 3D priors, including camera poses, we investigate its potential as a robust backbone for stereo vision tasks. Nevertheless, empirical results indicate that its direct application to stereo vision yields suboptimal performance. 
+We observe that <span style="background-color: #fff2cc;">VGGT suffers from a more significant degradation of geometric details during feature extraction.
+Such characteristics conflict with the requirements of binocular stereo vision, thereby constraining its efficacy for relative tasks.</span>  
+To bridge this gap, we propose <strong>StereoVGGT</strong>, a feature backbone specifically tailored for stereo vision. By leveraging the frozen VGGT and introducing a training-free feature adjustment pipeline, <span style="background-color: #ffcce2;">we mitigate geometric degradation and harness the latent camera calibration knowledge embedded within the model.</span> 
+StereoVGGT-based stereo matching network achieved the \(1^{st}\) rank among all published methods on the KITTI benchmark, validating that StereoVGGT serves as a highly effective backbone for stereo vision.
           </p>
         </div>
+        <image src="static/images/teaser.pdf" alt="Abstract" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
       </div>
     </div>
   </div>
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/teaser.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          StereoVGGT integrates the camera geometry knowledge encoded in VGGT while preserving robust feature representation capabilities. It can thus function as a backbone for stereo vision.
-        </h2>
+      <h2 class="title is-3" style="color: #111; text-align: center;">Motivation</h2>
+        <!-- Part 1 -->
+        <div class="motivation-block" style="background-color: #f1f3f4; padding: 1.5rem; border-radius: 16px; margin: 1rem 0; border-left: 4px solid #ddebf7;">
+          <div class="content has-text-justified" style="color: #111;">
+            <p>
+              <strong>Incorporating camera pose knowledge is crucial for stereo vision.</strong> This is because camera poses inherently encapsulate the camera focal length \(f\). According to the formulation \(d = \frac{f \cdot B}{z}\), the focal length \(f\) acts as a decisive determinant of the disparity \(d\). 
+              However, existing stereo vision backbones (i.e., VFMs and MDE models) are typically not trained with explicit camera pose data. 
+              The evaluation of the below histograms reveals that both leading methods—DINOv2 (a SOTA VFM) and DAv2 (a SOTA MDE model)—exhibit substantial errors in camera pose estimation.
+            </p>
+          </div>
+          <div class="columns is-vcentered is-centered" style="justify-content: center; align-items: center; margin: 1rem auto;">
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/chart.pdf" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+          </div>
+          <div class="content has-text-justified" style="color: #111;">
+            <p>
+              We argue that the absence of camera pose knowledge prevents existing stereo vision backbones from providing sufficient geometric priors, thereby creating a performance bottleneck for downstream tasks.
+            </p>
+          </div>
         </div>
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/middlebury.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+
+        <!-- Part 2 -->
+        <div class="motivation-block" style="background-color: #f1f3f4; padding: 1.5rem; border-radius: 16px; margin: 1rem 0; border-left: 4px solid #fff2cc;">
+          <div class="content has-text-justified" style="color: #111;">
+            <p>
+              While 3D foundation models like VGGT encodes rich camera geometry, simply using it as a backbone for stereo matching does not lead to substantial gains. This motivates another key research question: what underlying factors cause this performance gap?
+            </p>
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/vggtpk1.png" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+            <p>
+              We observe that <strong>VGGT tends to excessively degrade the structural contours within the feature maps.</strong> 
+              For example, as shown in the below figure, features from original DINOv2 maintain clear geometric contours of the vehicle. In contrast, features from the DINO component of VGGT suffer from structural blurring, where the vehicle become nearly indistinguishable from the ground.
+              This is attributed to VGGT's original design for multi-view reconstruction, where its inherent feature degradation characteristics were intended to mitigate cumulative errors. 
+            </p>
+          </div>
+          <div class="columns is-vcentered is-centered" style="justify-content: center; align-items: center; margin: 1rem auto;">
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/find-ssim.pdf" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+          </div>
+          <div class="content has-text-justified" style="color: #111;">
+            <p>
+              Unlike semantic-centric tasks that prioritize high-level abstraction, stereo vision relies heavily on the preservation of local structural integrity. 
+              The reduction in SSIM observed within VGGT reflects a severe structural degradation in the feature space. This phenomenon ultimately hampers the utility of VGGT as an effective backbone for stereo vision tasks.
+            </p>
+          </div>
         </div>
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/find-ssim.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-        </div>
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/stereo-pipeline.jpg" alt="MY ALT TEXT" style="width: 80%; display: block; margin: 0 auto;"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-        </div>
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/vis-disp_01.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-        </div>
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/vis-3dmovie_01.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-        </div>
-        <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/ScreenShot1.png" alt="MY ALT TEXT" style="width: 40%; display: block; margin: 0 auto;"/>
-        <h2 class="subtitle has-text-centered">
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-        </div>
+
+        <!-- Part 3 -->
+        <div class="motivation-block" style="background-color: #f1f3f4; padding: 1.5rem; border-radius: 16px; margin: 1rem 0; border-left: 4px solid #ffcce2;">
+          <div class="content has-text-justified" style="color: #111;">
+            <p>
+              To harness the latent <strong>camera-specific knowledge</strong> embedded within VGGT while <strong>bypassing its inherent degradation</strong>, we propose StereoVGGT. 
+            </p>
+          </div>
+          <div class="columns is-vcentered is-centered" style="justify-content: center; align-items: center; margin: 1rem auto;">
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/stereo-pipeline2.pdf" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+          </div>
+          <div class="content has-text-justified" style="color: #111;">
+            <p>
+              StereoVGGT can serves as a highly effective backbone for stereo vision: 
+              StereoVGGT-based <strong>stereo matching</strong> network ranks \(1^{st}\) among all published methods on the KITTI benchmark for non-occluded pixels. StereoVGGT-based <strong>stereo conversion</strong> network achieves SOTA performance on the Mono2Stereo and Inria 3D Movie datasets.
+            </p>
+          </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="color: #111; text-align: center;">StereoVGGT can be used as ...</h2>
+        <!-- Part 1 -->
+        <div class="motivation-block" style="background-color: #f1f3f4; padding: 1.5rem; border-radius: 16px; margin: 1rem 0; border-left: 4px solid #ffcce2;">
+          <div class="content has-text-justified" style="color: #111;">
+            <p align="center">
+              <strong>A Robust Stereo Geometry Extractor!</strong>
+            </p>
+          </div>
+          <div class="columns is-vcentered is-centered" style="justify-content: center; align-items: center; margin: 1rem auto;">
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/vis-disp.pdf" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="motivation-block" style="background-color: #f1f3f4; padding: 1.5rem; border-radius: 16px; margin: 1rem 0; border-left: 4px solid #ffcce2;">
+          <div class="content has-text-justified" style="color: #111;">
+            <p align="center">
+              <strong>A Feature Backbone for Stereo Matching!</strong>
+            </p>
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/kitti2015.pdf" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="motivation-block" style="background-color: #f1f3f4; padding: 1.5rem; border-radius: 16px; margin: 1rem 0; border-left: 4px solid #ffcce2;">
+          <div class="content has-text-justified" style="color: #111;">
+            <p align="center">
+              <strong>A Disparity Backbone for Stereo Conversion!</strong>
+            </p>
+          </div>
+          <div class="columns is-vcentered is-centered" style="justify-content: center; align-items: center; margin: 1rem auto;">
+            <div class="column has-text-centered" style="flex: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <img src="static/images/vis-3dmovie.pdf" alt="Pipeline" style="width:100%; height:auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="eager">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="color: #111; text-align: center;">Perception in the wild</h2>
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <!-- TODO: Replace with your teaser video -->
+            <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+              <!-- TODO: Add your video file path here -->
+              <source src="static/videos/video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>
+      @article{,
+        title={StereoVGGT},
+        author={},
+        journal={},
+        year={2025},
+        url={}
+      }
+      </code></pre>
+      </div>
 </section>
 <!--End BibTex citation -->
 
